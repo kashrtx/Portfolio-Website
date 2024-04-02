@@ -53,6 +53,11 @@
   
   section {
     margin-bottom: 3rem;
+    background-color: rgba(255, 255, 255, 0); /* Adjust transparency as needed */
+    padding: 20px;
+    border-radius: 10px; /* Keep rounded corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optional: adds a shadow for depth */
+    margin-bottom: 2rem; /* Ensure spacing between sections */
   }
   
   .project-grid {
@@ -62,7 +67,7 @@
   }
   
   .project {
-    background-color: rgba(244, 244, 244, 0);
+    background-color: rgba(255, 255, 255, 0); /* Adjust transparency as needed */
     padding: 1rem;
     text-align: center;
     border-radius: 10px;
@@ -163,7 +168,7 @@
     padding: 0 18px;
     display: none;
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: #252323;
     border-radius: 20px; /* Add rounded corners */
     animation: fadeIn 0.5s ease-out;
   }
@@ -178,4 +183,30 @@
     100% {
       background-position: 0% 50%;
     }
+  }
+  
+  h2 {
+    font-size: 2.5rem; /* Increase the font size */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Add a subtle shadow */
+    color: #fff; /* Adjust color as needed */
+    margin-bottom: 1rem; /* Add some space below the heading */
+  }
+
+  p {
+    font-size: 1.2rem; /* Slightly larger paragraph text */
+    color: #f0f0f0; /* Lighter text color for contrast against the semi-transparent background */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* Subtle text shadow for depth */
+  }
+
+  .social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+  }
+
+  .social-links a:hover, .social-links a:focus {
+    color: #007bff; /* Change to your preferred hover color */
+    transform: scale(1.1); /* Scale icon on hover */
+    transition: color 0.3s ease, transform 0.3s ease;
   }
