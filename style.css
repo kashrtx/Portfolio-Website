@@ -110,11 +110,11 @@
   
   section {
     margin-bottom: 3rem;
-    background-color: rgba(255, 255, 255, 0); /* Adjust transparency as needed */
+    background-color: rgba(255, 255, 255, 0); 
     padding: 20px;
-    border-radius: 10px; /* Keep rounded corners for a softer look */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optional: adds a shadow for depth */
-    margin-bottom: 2rem; /* Ensure spacing between sections */
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    margin-bottom: 2rem;
   }
   
   .project-grid {
@@ -206,9 +206,9 @@
   /* Expandable button styles */
   .project-expand {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Adjust number of columns based on available width */
-    grid-gap: 20px; /* Space between items */
-    align-items: start; /* Align items at the start of their container */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+    grid-gap: 20px; 
+    align-items: start; 
     background-color: #007bff65;
     color: white;
     padding: 20px 40px; 
@@ -263,9 +263,9 @@
   }
 
   p {
-    font-size: 1.2rem; /* Slightly larger paragraph text */
-    color: #f0f0f0; /* Lighter text color for contrast against the semi-transparent background */
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* Subtle text shadow for depth */
+    font-size: 1.2rem; 
+    color: #f0f0f0; 
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3); 
   }
 
   .social-links a {
@@ -322,7 +322,7 @@
   #contactForm input, #contactForm textarea {
     padding: 15px;
     border: none;
-    border-radius: 10px;
+    border-radius: 15px;
     outline: none; 
     transition: box-shadow 0.3s;
   }
