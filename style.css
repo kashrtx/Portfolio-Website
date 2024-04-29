@@ -113,8 +113,13 @@
     background-color: rgba(255, 255, 255, 0); 
     padding: 20px;
     border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     margin-bottom: 2rem;
+
+    /*3D Rotation effects*/
+    transition: transform 0.5s cubic-bezier(0.03, 0.87, 0.73, 0.9);
+    transform-style: preserve-3d;
+    will-change: transform;
   }
   
   .project-grid {
@@ -146,13 +151,14 @@
   }
   
   button, .project-expand {
+    transform-origin: center;
     padding: 0.5rem 1rem;
     background-color: #333;
     color: #fff;
     border: none;
     cursor: pointer;
     border-radius: 20px; /* Add rounded corners */
-    animation: fadeIn 0.5s ease-out;
+    animation: fadeIn 0.5s ease-out, fadeOut 0.5s ease-out;
   }
   
   /* Footer styles */
@@ -217,7 +223,7 @@
     text-align: left;
     border: none;
     outline: none;
-    transition: background-color 0.4s ease, transform 0.4s ease;
+    transition: background-color 0.4s ease;
     border-radius: 20px;
     font-size: 1.25rem;
     box-sizing: border-box;
@@ -226,8 +232,8 @@
   
   .project-expand:hover, .project-expand:focus, button:hover {
     background-color: #0056b3;
-    transform: scale(1.05); /* Scale button on hover */
-    transition: background-color 0.4s ease, transform 0.4s ease;
+    z-index: 10;
+    transition: background-color 0.4s ease;
   }
   
   .project-content {
@@ -291,12 +297,12 @@
     text-decoration: none;
     border-radius: 10px;
     font-weight: bold;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s ease-in-out;
   }
   
   .project a:hover {
     background-color: rgb(14, 243, 22);
-    transform: translateY(-2px);
+    transition: background-color 0.3s ease-in-out;
   }
 
   /* Contact me Styling */
