@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kaushal Bhingaradia</title>
+  <title>Kaushal Bhingaradia"</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
@@ -22,7 +22,15 @@
   <main>
     <section id="about">
       <h2>About Me</h2>
-      <p>Welcome to my personal website! I'm Kaushal Bhingaradia, a student at the University of Toronto, and a passionate software developer.</p>
+      <p><b>Welcome to my personal website! I'm Kaushal Bhingaradia, a student at the University of Toronto, and a passionate software developer.
+        In my TCS major at University of Toronto, we are exposed to a lot of UI/UX design concepts such as user-centric design and accessibility. 
+        This is where we make various projects that showcase our understanding of these concepts through responsive websites, software, Unity games, 
+        and UI-related projects. Courses like CCT286 and CCT270 have taught me a great deal about creating accessible and user-centric content.
+        I am also majoring in GIS, which has introduced me to more advanced concepts like spatial data analysis, querying with SQL, and Python 
+        scripting. This knowledge allows me to build on my skills and create even more advanced projects in the future. I am very creative and love 
+        exploring new things to develop various projects.
+      </b>
+      </p>
     </section>
 
     <section id="projects">
@@ -64,12 +72,13 @@
 
     <section id="contact">
       <h2>Contact Me</h2>
-      <form id="contact-form">
-        <input type="text" id="name" placeholder="Name" required>
-        <input type="email" id="email" placeholder="Email" required>
-        <textarea id="message" placeholder="Message" required></textarea>
+      <form id="contactForm" method="POST" action="https://formspree.io/f/mdoqbaad">
+        <input type="text" id="name" name="name" placeholder="Name" required>
+        <input type="email" id="email" name="_replyto" placeholder="Email" required>
+        <textarea id="message" name="message" placeholder="Message" required></textarea>
         <button type="submit">Send Message</button>
       </form>
+      <div id="msg"></div> <!-- Message status will be shown here -->
     </section>
   </main>
 

@@ -8,6 +8,7 @@
   body, html {
     height: 100%;
     margin: 0;
+    scroll-behavior: smooth;
   }
 
   body {
@@ -29,8 +30,21 @@
     position: sticky;
     top: 0;
     z-index: 1;
+    
   }
+
+  /* My logo style */
+  .logo {
+    font-weight: bold;
+    font-size: 2em; 
+    background: #FF0000;
+    background: linear-gradient(to left, #FF0000 0%, #FFFF00 50%, #FF0000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   
+  /* navigation buttons on header */
   nav {
     display: flex;
     justify-content: space-between;
@@ -39,9 +53,18 @@
   
   .nav-links a {
     color: #fff;
+    font-weight: bold;
+    font-size: x-large;
+    transition: all 0.3s ease;
     text-decoration: none;
     margin-left: 1rem;
-    animation: fadeIn 0.5s ease-out;
+    animation: fadeIn 0.5s ease-out, tranform 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: #0bfb1b;
+    transform: transformY(-10px);
+    transition: all 0.3s ease;
   }
   
   /* Main content styles */
@@ -71,6 +94,7 @@
     padding: 1rem;
     text-align: center;
     border-radius: 10px;
+    transition: all 0.3s ease;
   }
   
   /* Form styles */
@@ -114,7 +138,7 @@
   }
 
   .social-links a:hover {
-    color: #007bff; /* Change to your preferred hover color */
+    color: #007bff; 
   }
   
   /* Responsive styles */
@@ -147,16 +171,24 @@
   
   /* Expandable button styles */
   .project-expand {
-    background-color: #007bff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Adjust number of columns based on available width */
+    grid-gap: 20px; /* Space between items */
+    align-items: start; /* Align items at the start of their container */
+    background-color: #007bff65;
     color: white;
-    padding: 10px;
-    width: 100%;
+    padding: 20px 40px; 
+    width: auto; 
+    max-width: 100%; 
     text-align: left;
     border: none;
     outline: none;
-    transition: background-color 0.4s ease;
-    border-radius: 20px; /* Add rounded corners */
+    transition: background-color 0.4s ease, transform 0.4s ease;
+    border-radius: 20px;
+    font-size: 1.25rem;
+    box-sizing: border-box;
   }
+  
   
   .project-expand:hover, .project-expand:focus, button:hover {
     background-color: #0056b3;
@@ -165,10 +197,10 @@
   }
   
   .project-content {
-    padding: 0 18px;
+    padding: 20px;
     display: none;
     overflow: hidden;
-    background-color: #252323;
+    background-color: #2523237a;
     border-radius: 20px; /* Add rounded corners */
     animation: fadeIn 0.5s ease-out;
   }
@@ -186,10 +218,14 @@
   }
   
   h2 {
-    font-size: 2.5rem; /* Increase the font size */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Add a subtle shadow */
-    color: #fff; /* Adjust color as needed */
-    margin-bottom: 1rem; /* Add some space below the heading */
+    font-size: 4.5rem;
+    font-weight: bolder;
+    /*text-shadow: 2px 2px 4px rgba(0,0,0,0.5); */
+    color: #fff; 
+    margin-bottom: 0.5rem;
+    background: linear-gradient(90deg, #FFA454 0%, #CAE545 50%, #68FF64 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   p {
@@ -203,10 +239,94 @@
     text-decoration: none;
     margin: 0 0.5rem;
     transition: color 0.3s ease;
+    font-size: 28px;
   }
 
   .social-links a:hover, .social-links a:focus {
-    color: #007bff; /* Change to your preferred hover color */
-    transform: scale(1.1); /* Scale icon on hover */
+    color: #007bff; 
+    transform: scale(1.1); /* Scale the icon on hover */
     transition: color 0.3s ease, transform 0.3s ease;
   }
+
+/*Project content view project button styling*/
+  .project a {
+    display: inline-block;
+    padding: 5px 5px;
+    background-color: rgb(101, 101, 202);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .project a:hover {
+    background-color: rgb(14, 243, 22);
+    transform: translateY(-2px);
+  }
+
+  /* Contact me Styling */
+  #contact {
+    padding: 40px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  #contact h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  #contactForm {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Creates space between form elements */
+  }
+  
+  #contactForm input, #contactForm textarea {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    outline: none; 
+    transition: box-shadow 0.3s;
+  }
+  
+  #contactForm input:hover, #contactForm textarea:hover {
+    box-shadow: 0 0 9px 5px #eeff00;
+    transition: box-shadow 0.3s;
+  }
+  #contactForm button {
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #contactForm button{
+    background-color: #1ab3e2;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    border-radius: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+
+  }
+  #contactForm button:hover {
+    background-color: #0bfb1b;
+   
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+#msg {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1.2rem;
+  }
+  
