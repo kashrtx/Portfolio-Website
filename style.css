@@ -300,6 +300,11 @@
     transition: background-color 0.3s ease-in-out;
   }
   
+  .project ul{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
   .project a:hover {
     background-color: rgb(14, 243, 22);
     transition: background-color 0.3s ease-in-out;
@@ -327,19 +332,24 @@
   
   #contactForm input, #contactForm textarea {
     padding: 15px;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    font-size: 1.2rem;
     border: none;
     border-radius: 15px;
     outline: none; 
-    transition: box-shadow 0.3s;
+    background-color: #ffffffb4;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
   }
   
   #contactForm input:hover, #contactForm textarea:hover {
     box-shadow: 0 0 9px 5px #eeff00;
-    transition: box-shadow 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    
   }
   #contactForm button {
     padding: 15px;
-    background-color: #007bff;
+    background-color: #007bff6d;
     color: white;
     border: none;
     border-radius: 5px;
@@ -348,19 +358,19 @@
   }
   
   #contactForm button{
-    background-color: #1ab3e2;
+    background-color: #1ab3e2b5;
     font-weight: bold;
     font-size: 1.2rem;
     text-transform: uppercase; 
     letter-spacing: 1px;
     border-radius: 20px;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
 
   }
   #contactForm button:hover {
-    background-color: #0bfb1b;
-   
-    transition: background-color 0.3s, transform 0.3s;
+    background-color: #0bfb1bca;
+    box-shadow: 0 0 9px 5px #eeff00; 
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
   }
 
 #msg {
@@ -369,4 +379,22 @@
     font-weight: bold;
     margin-bottom: 1.2rem;
   }
-  
+  /*Back to top*/
+  footer #backtotop {
+    display: inline-block;
+    padding: 8px 12px; 
+    text-decoration: none; 
+    color: white;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    background-color: #ff000088;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  footer #backtotop:hover {
+    background-color: #59ff00;
+    transition: background-color 0.3s;
+  }
